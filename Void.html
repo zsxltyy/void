@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOID</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#040404;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 80% 15%, rgba(140,0,255,.25), transparent 35%),
+    radial-gradient(circle at 20% 80%, rgba(100,0,255,.18), transparent 40%);
+    z-index:-2;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size:60px 60px;
+    z-index:-1;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 80px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:8px;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#7d2cff,#b347ff);
+    padding:16px 36px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+    box-shadow:0 0 35px rgba(179,71,255,.35);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 50px rgba(179,71,255,.55);
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    padding:0 80px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.tag{
+    color:#a970ff;
+    letter-spacing:5px;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:88px;
+    line-height:1;
+    margin-bottom:30px;
+    font-weight:800;
+}
+
+.hero p{
+    color:#bcbcbc;
+    font-size:24px;
+    line-height:1.6;
+    max-width:700px;
+    margin-bottom:45px;
+}
+
+.section{
+    padding:120px 80px;
+}
+
+.section h2{
+    font-size:64px;
+    margin-bottom:20px;
+    max-width:900px;
+}
+
+.description{
+    color:#b8b8b8;
+    font-size:22px;
+    margin-bottom:60px;
+    max-width:1000px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(180,100,255,.15);
+    border-radius:28px;
+    padding:35px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#9333ff;
+    box-shadow:0 0 35px rgba(147,51,255,.15);
+}
+
+.icon{
+    width:72px;
+    height:72px;
+    border-radius:20px;
+    background:rgba(147,51,255,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.card h3{
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.card p{
+    color:#b8b8b8;
+    font-size:18px;
+    line-height:2;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:900px){
+
+nav,
+.hero,
+.section{
+    padding-left:25px;
+    padding-right:25px;
+}
+
+.hero h1{
+    font-size:52px;
+}
+
+.section h2{
+    font-size:42px;
+}
+
+.hero p,
+.description{
+    font-size:18px;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">VOID</div>
+
+    <a href="https://discord.gg/vFTfdYAZyp"
+       target="_blank"
+       class="btn">
+       Join us
+    </a>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            FAST. MINIMAL. SECURE.
+        </div>
+
+        <h1>
+            The nuke bot you've been searching for.
+        </h1>
+
+        <p>
+            We absolutely prioritize speed, security (hilarious i know),
+            clean UIs and experience.
+            Can't wait for you to try it!
+        </p>
+
+        <a href="https://discord.gg/vFTfdYAZyp"
+           target="_blank"
+           class="btn">
+           Join Discord
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>
+        Here's some important assets we prioritize
+    </h2>
+
+    <p class="description">
+        These assets you see below are very important to us,
+        and we use them to make your experience as good as possible.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">⚡</div>
+
+            <h3>Speed</h3>
+
+            <p>
+                We have designed our products to be fast and as responsive
+                as possible, no matter what we're running them on
+                (potatoes rn yeah but runs fine trust).
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">💪</div>
+
+            <h3>Reliability</h3>
+
+            <p>
+                Our products are designed to be reliable,
+                as your main product. We believe you'll use
+                them every day, and choosing them over others!
+                (right? RIGHT?!)
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🎨</div>
+
+            <h3>UI/UX</h3>
+
+            <p>
+                We also cured the UI/UX of our products carefully,
+                just for your eyes to enjoy and melt at this beauty.
+                (I deserve a raise.)
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2025 VOID. All Rights Reserved.
+</footer>
+
+</body>
+</html>
+```
